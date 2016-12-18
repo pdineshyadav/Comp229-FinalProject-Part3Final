@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Comp229Assignment2.Models.Soup>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Soups</h2>
+
+<div style="margin-top: 165px;">
+    <h2>Soups</h2>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SoupName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoupShortDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoupPrice)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoupName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoupShortDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoupPrice)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.SoupID }, new { @class = "btn btn-success" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

@@ -1,0 +1,47 @@
+﻿@model Comp229Assignment2.Models.Soup
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div style="margin-top: 165px;">
+    <h2>Soup Details</h2>
+    <div>
+        <h4>Soup</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.SoupName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.SoupName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.SoupLongDesc)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.SoupLongDesc)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.SoupPrice)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.SoupPrice)
+            </dd>
+            <dd>
+                <img src="@Url.Content(Model.SoupImage)" class="img-rounded detailsimages" />
+            </dd>
+        </dl>
+    </div>
+    <p>
+        @if (HttpContext.Current.User.IsInRole("Admin"))
+            {
+            @Html.ActionLink("Back to List", "Admin")
+        }
+        else
+        {
+            @Html.ActionLink("Back to List", "Index")
+        }
+    </p>
+    </divstyle="margin-top:>

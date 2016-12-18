@@ -1,0 +1,34 @@
+﻿@using TeamProject2_Part1.Models
+@model Category
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h1>@Model.Name</h1>
+
+@*
+<table class="table table-responsive">
+    @foreach (var item in Model.Items)
+    {
+        <tr style="border:hidden">
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.ItemSmallIconUrl)" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortDescription)
+            </td>
+            <td>
+                $@Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.ItemId })
+            </td>
+        </tr>
+    }
+</table>
+    *@
+

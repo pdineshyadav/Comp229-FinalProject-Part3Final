@@ -1,0 +1,40 @@
+﻿@model IEnumerable <Comp229Assignment2.Models.Appetizer>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Appetizers</h2>
+<p></p>
+<div style="margin-top: 165px;">
+    <h2>Appetizers</h2>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AppetizerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppetizerShortdescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppetizerPrice)
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AppetizerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AppetizerShortdescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AppetizerPrice)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.AppetizerId }, new { @class = "btn btn-success" })
+                </td>
+            </tr>
+        }
+    </table>

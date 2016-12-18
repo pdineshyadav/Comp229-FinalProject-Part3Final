@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - PS Restaurent</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/fontawesome")
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+</head>
+<body style="font-family:'Indie Flower',cursive;font-size:20px">
+    <div class="navbar navbar-inverse navbar-fixed-top" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Action("Index","Home")"><img src="~/Assets/images/logo.png"/> </a>
+            </div>
+            <div class="navbar-collapse collapse" style="font-family:'tangerine',serif;font-size:20px">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                    <li><a href="@Url.Action("About", "Home")"><i class="fa fa-info fa-lg"></i> About</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")"><i class="fa fa-phone fa-lg"></i> Contact</a></li>
+                </ul>
+
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="background-image: url('../../Assets/images/background.jpg'); ">
+        <div class="jumbotron" style="background-image:url('/Assets/images/bannerjpg.jpg');background-size:cover;background-repeat:no-repeat;">
+            <h1>Welcome to</h1>
+            <p>PS Restaurant</p>
+        </div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - PS Restaurent</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/app")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

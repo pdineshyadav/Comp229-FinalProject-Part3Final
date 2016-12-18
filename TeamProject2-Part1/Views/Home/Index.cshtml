@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@* Student 1 - Dinesh Palle - 300705307 
+    Student 2 - Tarun Rana - 300871205
+    Assignment - Final Project Comp 229
+    Description - This is the home page of our Final Project
+    Index.cshtml
+*@
+<div class="jumbotron">
+    <h1>Soup</h1>
+    <img alt="Soup" height="171" src="~/Assets/images/SoupHome.jpg" style="float: right;padding-left:2em" width="256">
+    <p>Soup is a primarily liquid food, generally served warm or hot, that is made by combining ingredients such as meat and vegetables with stock, juice, water, or another liquid. Hot soups are additionally characterized by boiling solid ingredients in liquids in a pot until the flavors are extracted, forming a broth.</p>
+    <p><a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Soups")" role="button">See menu</a></p>
+</div>
+<div class="jumbotron">
+    <h1>Appetizer</h1>
+    <img alt="Appetizer" height="171" src="~/Assets/images/AppetizerHome.jpg" style="float:left;padding-right:2em" width="256">
+    <p>An hors d'oeuvre, appetizer, or starter is a small dish served before a meal. Some hors d'oeuvres are served cold, others hot. Hors d'oeuvres may be served at the dinner table as a part of the meal, or they may be served before seating. Formerly, hors d'oeuvres were also served between courses.</p>
+    <p><a class="btn btn-primary btn-lg" href="@Url.Action("Browse", "Restaurant", new { category = "Appetizer" })" role="button">See menu</a></p>
+</div>
+<div class="jumbotron">
+    <h1>Entree</h1>
+    <img alt="Entree" height="171" src="~/Assets/images/Entreehome.jpg" style="float: right;padding-left:2em" width="256">
+    <p>The main course is the featured or primary dish in a meal consisting of several courses. It usually follows the entrée ("entry") course. In the United States and parts of Canada, it may be called "entrée". In china, entree will always include chicken, beef, pork and so on. In China, every meal should have at least one entree to show the respect to the guest</p>
+    <p><a class="btn btn-primary btn-lg" href="@Url.Action("Browse", "Restaurant", new { category = "Entree" })" role="button">See menu</a></p>
+</div>
+<div class="jumbotron">
+    <h1>Dim Sum</h1>
+    <img alt="DimSum" height="171" src="~/Assets/images/DimSumHome.jpg" style="float: left;padding-right:2em" width="256">
+    <p>Dim Sum is a style of Chinese cuisine (particularly Cantonese but also other varieties) prepared as small bite-sized portions of food served in small steamer baskets or on small plates. Dim sum dishes are usually served with tea, together formed a full tea brunch. Dimsums is one of the famous food in China, every people in GuangDong will go to DimSum store at least twice a week.</p>
+    <p><a class="btn btn-primary btn-lg" href="@Url.Action("Browse", "Restaurant", new { category = "Dimsum" })" role="button">See menu</a></p>
+</div>

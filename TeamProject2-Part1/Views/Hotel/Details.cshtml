@@ -1,0 +1,41 @@
+﻿@using TeamProject2_Part1.Models
+@model Item
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h2>Details</h2>
+<div id="item-details">
+    <dl class="dl-horizontal">
+        <dt>
+            Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+ 
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            $@Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+
+        </dt>
+        <dd>
+            <img src="@Html.DisplayFor(model => model.ItemLargeIconUrl)"  />
+        </dd>
+        <dt>
+
+        </dt>
+        <dd style="padding-top: 6px">
+            <p class="btn btn-success btn-lg">
+                @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = Model.ItemId }, "")
+            </p>
+        </dd>
+    </dl>
+</div>
+
+

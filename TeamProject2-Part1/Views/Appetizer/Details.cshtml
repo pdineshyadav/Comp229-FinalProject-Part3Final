@@ -1,0 +1,47 @@
+﻿@model Comp229Assignment2.Models.Appetizer
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div style="margin-top: 165px;">
+    <h2>Appetizer Details</h2>
+    <div>
+        <h4>Appetizer</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.AppetizerName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.AppetizerName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.AppetizerLongdescription)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.AppetizerLongdescription)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.AppetizerPrice)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.AppetizerPrice)
+            </dd>
+            <dd>
+                <img class="detailsimages" src="@Url.Content(Model.AppetizerImage)" class="img-rounded" />
+            </dd>
+        </dl>
+    </div>
+    <p>
+        @if (HttpContext.Current.User.IsInRole("Admin"))
+        {
+            @Html.ActionLink("Back to List", "Admin")
+        }
+        else
+        {
+            @Html.ActionLink("Back to List", "Index")
+        }
+    </p>
+</div>

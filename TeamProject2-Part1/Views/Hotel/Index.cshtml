@@ -1,0 +1,19 @@
+﻿@using TeamProject2_Part1.Models
+@model IEnumerable<Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Browse Categories</h2>
+@*
+<p>
+    Select from @Model.Count() categories:
+</p>
+<ul>
+    @foreach (Category item in Model)
+    {
+        <li>@Html.ActionLink(item.Name, "Browse", new { category = item.Name })</li>
+    }
+</ul>
+*@
